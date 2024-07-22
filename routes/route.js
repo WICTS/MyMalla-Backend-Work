@@ -17,6 +17,10 @@ const AppControllers = require('../controllers/appuser/appUser')
 const somestoreController = require('../controllers/someStoreController')
 const viewDetailStoreModel = require('../controllers/viewDetailStoreModel')
 const getallUserList = require('../controllers/appuser/getallAppUser')
+const createdeliveryControllers = require('../controllers/deliveryStaff/createdelivery')
+const deliveryList = require('../controllers/deliveryStaff/getDeliverylist')
+const deletedelivery = require('../controllers/deliveryStaff/deletedelivery')
+const deliveryUpdate = require('../controllers/deliveryStaff/updateDelivery')
 
 
 
@@ -51,6 +55,12 @@ router.delete('/deleteorder/:_id',deleteOrder)
 
 router.post('/createAppUser',AppControllers)
 router.get('/getallAppUser',getallUserList)
+
+
+router.post('/createdelivery',createdeliveryControllers)
+router.get('/getalldelivery',deliveryList)
+router.delete('/deletedelivery',deletedelivery)
+router.put('/updatedelivery',deliveryUpdate)
 
 
 
