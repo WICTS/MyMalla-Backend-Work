@@ -19,7 +19,7 @@ try {
         throw new Error('please check your data ')
     }
 } catch (error) {
-    res.json|({
+    res.json({
         message:error.message||error,
         success:false,
         error:true

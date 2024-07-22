@@ -9,6 +9,7 @@ const ManageOrder = require("../../models/manageOrder")
 
 const deleteOrder=async(req,res)=>{
     const id=req.params._id
+    // console.log('id',id)
 try {
     if(!id){
         throw new Error('please check details')
@@ -22,7 +23,7 @@ try {
         throw new Error('please check your data ')
     }
 } catch (error) {
-    res.json|({
+    res.json({
         message:error.message||error,
         success:false,
         error:true

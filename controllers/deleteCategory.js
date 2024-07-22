@@ -8,6 +8,7 @@ const categoryWise = require("../models/CategoryStore")
 
 const deleteCategory=async(req,res)=>{
     const id=req.params._id
+    console.log('id',id)
 try {
     if(!id){
         throw new Error('please check details')
@@ -21,7 +22,7 @@ try {
         throw new Error('please check your data ')
     }
 } catch (error) {
-    res.json|({
+    res.json({
         message:error.message||error,
         success:false,
         error:true

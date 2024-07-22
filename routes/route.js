@@ -16,6 +16,7 @@ const deleteOrder = require('../controllers/manageorder/deleteOredr')
 const AppControllers = require('../controllers/appuser/appUser')
 const somestoreController = require('../controllers/someStoreController')
 const viewDetailStoreModel = require('../controllers/viewDetailStoreModel')
+const getallUserList = require('../controllers/appuser/getallAppUser')
 
 
 
@@ -32,7 +33,7 @@ router.post('/createstoredata',somestoreController)
 router.get('/viewdetails/:_id',viewDetailStoreModel)
 
 router.delete('/deleteStoreData/:_id',deleteDataTostore)
-router.post('/category',categoryStore)
+router.post('/createcategory',categoryStore)
 
 router.delete('/deleteCategory/:_id',deleteCategory)
 router.get('/getallcategory',getCategoryList)
@@ -46,9 +47,10 @@ router.delete('/deleteManageStote/:_id',deletemanagestore)
 
 router.post('/createOrder',OrderControllers)
 router.get('/getOrderlist',getorderList)
-router.delete('/delete/:_id',deleteOrder)
+router.delete('/deleteorder/:_id',deleteOrder)
 
 router.post('/createAppUser',AppControllers)
+router.get('/getallAppUser',getallUserList)
 
 
 

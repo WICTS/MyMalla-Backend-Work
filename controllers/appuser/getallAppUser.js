@@ -7,7 +7,7 @@ const getallUserList=async(req,res)=>{
     try {
         
         const allUser=await AppUserData.find()
-        if(orderData){
+        if(allUser){
             return res.status(200).json({
                 data:allUser,
                 success:true,
@@ -20,7 +20,7 @@ const getallUserList=async(req,res)=>{
 
 
     } catch (error) {
-        res.json|({
+        res.json({
             message:error.message||error,
             success:false,
             error:true
